@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+/* 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+
+
+body {
+  font-family: "Lato" sans-serif;
+  background-image: url("gray.png");
+  margin: 0;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1; top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+ .icon-bar{
+  margin-left: 1215px;
+}
+.icon-bar{
+  postion-absolute;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.carousel-inner img {
+      width: 100%;
+      height: 50%;
+  }
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+  
+* {
+  box-sizing: border-box;
+}
+.i{
+  position:absolute;
+  right:5%;
+  float:right;
+  font-size: 35px;
+}
+.b{
+  position:absolute;
+  right:20%;
+  float:right;
+  font-size: 35px;
+}
+.f{
+  position:absolute;
+  right:10%;
+  float:right;
+  font-size: 35px;
+}
+.e{
+  position:absolute;
+  right:15%;
+  float:right;
+  font-size: 35px;
+}
+
+</style>
+</head>
+<body>
+
+<script  >
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+} 
+</script>
+
+    <div style="margin-top:10%;position:absolute;
+        max-width:220px;width:80%;height:5%;max-height:50px;margin:right;margin:10px;padding:10px; float:right;">
+    </div>
+
+<nav class="navbar navbar-expand-sm bg-warning text-black">
+  <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br><br>
+ <a href="dashboard.html">Home</a><br><br>
+  <a href="profile.html">Profile</a><br><br>
+  <a href="pets.html">Pets</a><br><br>
+  <a href="gallary.html">Gallery</a><br><br>
+  <a href="contact.html">Contact</a> <br><br> 
+  <a href="index.html">Logout</a> 
+  
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()"><img src=logo.jpg style="width:40px;">
+</button>  
+ 
+</div> 
+  <a class="navbar-brand" href="home.html">   </a> 
+  <center><h1 style="color:white;">THE FUZZ ROOM</h1></center>
+  <div class="i">
+    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+  </div>
+  <div class="b">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+  </div>
+   <div class="f">
+   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  </div>
+  <div class="e">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+  </div>
+</nav>
+
+
+<div class="topnav">
+  <a href="#contact">"Pets are humanizing. They remind us we have an obligation and responsibility to preserve and nurture and care for all life"</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div class="header" id="myHeader">
+    <h1>GALLARY</h1>
+    <p>Click on the buttons to change the image view.</p>
+    <button class="btn" onclick="one()">Large</button>
+    <button class="btn active" onclick="two()">Medium</button>
+    <button class="btn" onclick="four()">Small</button>
+  </div>
+  
+  <!-- Photo Grid -->
+  <div class="row"> 
+    <div class="column">
+      <img src="1.jpg" style="width:100%">
+      <img src="2.jpg" style="width:100%">
+      <img src="3.jpg" style="width:100%">
+      <img src="4.jpg" style="width:100%">
+      <img src="5.jpg" style="width:100%">
+      <img src="6.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="8.jpg" style="width:100%">
+      <img src="9.jpg" style="width:100%">
+      <img src="10.jpg" style="width:100%">
+      <img src="11.jpg" style="width:100%">
+      <img src="12.png" style="width:100%">
+      <img src="13.jpg" style="width:100%">
+      <img src="7.jpg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img src="14.jpg" style="width:100%">
+      <img src="15.jpg" style="width:100%">
+      <img src="17.jpg" style="width:100%">
+      <img src="18.jpg" style="width:100%">
+      <img src="19.jpg" style="width:100%">
+      <img src="27.jpg" style="width:100%">
+      <img src="20.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="21.jpg" style="width:100%">
+      <img src="22.jpg" style="width:100%">
+      <img src="23.jpg" style="width:100%">
+      <img src="24.jpg" style="width:100%">
+      <img src="25.jpg" style="width:100%">
+      <img src="26.jpg" style="width:100%">
+    </div>
+  </div>
+  
+  <script>
+  // Get the elements with class="column"
+  var elements = document.getElementsByClassName("column");
+  
+  // Declare a loop variable
+  var i;
+  
+  // Full-width images
+  function one() {
+      for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "100%";  // IE10
+      elements[i].style.flex = "100%";
+    }
+  }
+  
+  // Two images side by side
+  function two() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "50%";  // IE10
+      elements[i].style.flex = "50%";
+    }
+  }
+  
+  // Four images side by side
+  function four() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.msFlex = "25%";  // IE10
+      elements[i].style.flex = "25%";
+    }
+  }
+  
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myHeader");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+body {
+  /*font-family: "Lato", sans-serif;
+  background-image: url("gray.png");*/
+  background-image: url("");
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.sidebar1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1; top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar1 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar1 a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar1 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+ .icon-bar{
+  margin-left: 1215px;
+}
+.icon-bar{
+  postion-absolute;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar1 {padding-top: 15px;}
+  .sidebar1 a {font-size: 18px;}
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+  
+  .card {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  display: grid;
+  margin:right;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button1 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button1:hover, a:hover {
+  opacity: 0.7;
+}
+
+.flip-card {
+  background-color: white;
+  width: 500px;
+  height: 800px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #FFFFFF;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+
+<script  >
+function openNav() {
+  document.getElementById("mySidebar1").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar1").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+} 
+</script>
+
+    <!-- <div style="margin-top:10%;position:absolute;
+        max-width:220px;width:80%;height:5%;max-height:50px;margin:right;margin:10px;padding:10px; float:center;">
+    </div> -->
+
+<nav class="navbar navbar-expand-sm bg-warning text-black">
+  <div id="mySidebar1" class="sidebar1">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br><br>
+  <a href="dashboard.html">Home</a><br><br>
+  <a href="profile.html">Profile</a><br><br>
+  <a href="Pets.html">Pet</a><br><br>
+  <a href="gallary.html">Gallery</a><br><br>
+  <a href="contact.html">Contact</a> 
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()"><img src=logo.jpg style="width:40px;">
+</button>  
+</div> 
+  <a class="navbar-brand" href="home.html">   </a> 
+  <center><h1 style="color:white;">THE FUZZ ROOM</h1></center>
+</nav>
+<div class="topnav">
+  <a href="#contact">“Pets are humanizing. They remind us we have an obligation and responsibility to preserve and nurture and care for all life”</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<br><br>
+<div>
+  <div class="row">
+
+<div class="column">
+  <div class="card">
+  <div class="container">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="bluetang.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <h1>BLUE TANG</h1>
+      <div> <p class="title">Paracanthurus hepatus is a species of Indo-Pacific surgeonfish. A popular fish in marine aquaria, it is the only member of the genus Paracanthurus.</p>
+  <p>Lifespan: 8 – 20 years (In captivity)<br>
+Mass: 600 g (Adult)<br>
+Class: Actinopterygii<br>
+Phylum: Chordata<br>
+Order: Perciformes</p></div>
+    </div>
+
+    <div class="flip-card-back">
+      <img src="bluetang.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <br><br><br><br><br>
+      <button>ADOPT ME!</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="column">
+  <div class="card">
+  <div class="container">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="gold.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <h1>GOLDFISH</h1>
+      <div> <p class="title">The goldfish is a freshwater fish in the family Cyprinidae of order Cypriniformes. It is one of the most commonly kept aquarium fish. A relatively small member of the carp family, the goldfish is native to East Asia.</p>
+  <p>Family: Cyprinidae<br>
+Scientific name: Carassius auratus<br>
+Class: Actinopterygii<br>
+Order: Cypriniformes
+</p></div>
+    </div>
+
+    <div class="flip-card-back">
+      <img src="gold.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <br><br><br><br><br>
+      <button>ADOPT ME!</button>
+    </div>
+  </div>
+</div>
+</div>
+</div> 
+</div>
+<div class="column">
+  <div class="card">
+  <div class="container">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="star.webp" alt="Avatar" style="width:300px;height:300px;">
+      <h1>STARFISH</h1>
+      <div> <p class="title">Starfish or sea stars are star-shaped echinoderms belonging to the class Asteroidea. Common usage frequently finds these names being also applied to ophiuroids, which are correctly referred to as brittle stars or basket stars.</p>
+  <p>Scientific name: Asteroidea<br>
+Class: Asteroidea; De Blainville, 1830<br>
+Higher classification: Asterozoa<br>
+Phylum: Echinodermata</p></div>
+    </div>
+
+    <div class="flip-card-back">
+      <img src="star.webp" alt="Avatar" style="width:300px;height:300px;">
+      <br><br><br><br><br>
+      <button>ADOPT ME!</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</div> </div>
+
+</body>
+</html>
+
+
+
+
+
+<!-- 
+
+
+button></p>
+</div>
+
+<div class="card">
+  <img src="gold.jpg" alt="GOLDEN" style="width:100%">
+  <h1>GOLDEN FISH</h1>
+  <p class="title">The goldfish is a freshwater fish in the family Cyprinidae of order Cypriniformes. It is one of the most commonly kept aquarium fish. A relatively small member of the carp family, the goldfish is native to East Asia.</p>
+  <p>Family: Cyprinidae<br>
+Scientific name: Carassius auratus<br>
+Class: Actinopterygii<br>
+Order: Cypriniformes</p>
+ 
+  <p><button>ADOPT ME!</button></p>
+</div>
+<div class="card">
+  <img src="neon.jpg" alt="beagle" style="width:100%">
+  <h1>NEON TETRA</h1>
+  <p class="title">The neon tetra is a freshwater fish of the characin family of order Characiformes. The type species of its genus, it is native to blackwater and clearwater streams in the Orinoco and Amazon basin of South America.</p>
+  <p>Scientific name: Paracheirodon innesi<br>
+Family: Characidae<br>
+Order: Characiformes<br>
+Class: Actinopterygii<br>
+Higher classification: Paracheirodon</p>
+ 
+  <p><button>ADOPT ME!</button></p>
+</div>
+</div>
+
+
+
+       
+
+</body>
+</html> -->
